@@ -3,6 +3,9 @@
   "extends": [
     "standard",
     "standard-react",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "prettier/standard",
     "prettier/react",
@@ -30,6 +33,7 @@
     "react/jsx-handler-names": 0,
     "react/jsx-fragments": 0,
     "react/no-unused-prop-types": 0,
-    "import/export": 0
+    "import/export": 0,
+    "@typescript-eslint/member-delimiter-style": 0
   }
 }
