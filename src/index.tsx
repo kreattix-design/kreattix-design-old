@@ -1,6 +1,6 @@
 import React from 'react'
 import icon from './icon.svg'
-import './scss/index.scss'
+import './scss/kreattix-design.scss'
 
 export interface ComponentProps {
   title: string

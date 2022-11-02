@@ -2,7 +2,6 @@
   "name": "kreattix-design",
   "version": "0.0.4",
   "description": "UI component library for React JS",
-  "outputDir": "lib",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "source": "src/index.tsx",
