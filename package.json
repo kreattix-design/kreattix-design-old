@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "start": "npm run build",
+    "start": "rollup -c -w",
     "build": "npm run clean && rollup -c",
     "clean": "rimraf lib && rimraf dist",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,js,jsx}\"",

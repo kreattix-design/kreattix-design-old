@@ -7,7 +7,7 @@ const Box: React.FC<BoxProps> = ({
   className,
   align,
   justify,
-  direction,
+  direction = 'vertical',
   size,
   flex,
   wrap = true,
