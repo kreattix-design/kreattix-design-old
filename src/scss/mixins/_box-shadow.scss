@@ -1,0 +1,5 @@
+@mixin box-shadow($value: $box-shadow, $color: $box-shadow-color) {
+  @if $enable-theme-shadow {
+    box-shadow: $value $color;
+  }
+}

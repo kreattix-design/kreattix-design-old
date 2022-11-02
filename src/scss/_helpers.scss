@@ -1,0 +1,147 @@
+.clearfix {
+  @include clearfix();
+}
+
+@for $i from 1 through 10 {
+  .w#{$i*100} {
+    width: #{$i * 100px};
+    max-width: 100%;
+  }
+  .w-#{$i*10} {
+    width: #{$i * 10%};
+  }
+}
+
+@each $name, $color in $colors {
+  @include helper_colors($name, $color);
+}
+@each $name, $color in $theme-colors {
+  @include helper_colors($name, $color);
+}
+@each $name, $color in $grays {
+  @include helper_colors($name, $color);
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.direction- {
+  &horizontal {
+    flex-direction: row;
+  }
+  &vertical {
+    flex-direction: column;
+  }
+}
+
+.align- {
+  &start {
+    align-items: flex-start;
+  }
+  &center {
+    align-items: center;
+  }
+  &end {
+    align-items: flex-end;
+  }
+  &stretch {
+    align-items: stretch;
+  }
+}
+.justify- {
+  &start {
+    justify-content: flex-start;
+  }
+  &center {
+    justify-content: center;
+  }
+  &end {
+    justify-content: flex-end;
+  }
+  &stretch {
+    justify-content: stretch;
+  }
+  &around {
+    justify-content: space-around;
+  }
+  &between {
+    justify-content: space-between;
+  }
+  &evenly {
+    justify-content: space-evenly;
+  }
+}
+
+@each $num, $space in $spacers {
+  .p-#{$num} {
+    padding: $space !important;
+  }
+  .pl-#{$num} {
+    padding-left: $space !important;
+  }
+  .pr-#{$num} {
+    padding-right: $space !important;
+  }
+  .pt-#{$num} {
+    padding-top: $space !important;
+  }
+  .pb-#{$num} {
+    padding-bottom: $space !important;
+  }
+  .pv-#{$num} {
+    padding-top: $space !important;
+    padding-bottom: $space !important;
+  }
+  .ph-#{$num} {
+    padding-left: $space !important;
+    padding-right: $space !important;
+  }
+  .m-#{$num} {
+    margin: $space !important;
+  }
+  .ml-#{$num} {
+    margin-left: $space !important;
+  }
+  .mr-#{$num} {
+    margin-right: $space !important;
+  }
+  .mt-#{$num} {
+    margin-top: $space !important;
+  }
+  .mb-#{$num} {
+    margin-bottom: $space !important;
+  }
+  .mv-#{$num} {
+    margin-top: $space !important;
+    margin-bottom: $space !important;
+  }
+  .mh-#{$num} {
+    margin-left: $space !important;
+    margin-right: $space !important;
+  }
+}
+
+.m-auto {
+  margin: auto !important;
+}
+.ml-auto {
+  margin-left: auto !important;
+}
+.mr-auto {
+  margin-right: auto !important;
+}
+.mt-auto {
+  margin-top: auto !important;
+}
+.mb-auto {
+  margin-bottom: auto !important;
+}
+.mv-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+.mh-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}

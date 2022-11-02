@@ -1,5 +1,8 @@
-$color: blue;
+@import "./utils";
+@import "./variables";
 
-body {
-  background-color: $color;
-}
+@import "./core";
+@import "./mixins";
+@import "./helpers";
+
+@import "./components";

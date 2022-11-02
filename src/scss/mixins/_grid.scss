@@ -1,0 +1,96 @@
+@mixin make-row($gutter: $grid-gutter-width) {
+	--#{$prefix}gutter-x: #{$gutter};
+	--#{$prefix}gutter-y: #{$gutter};
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: var(--#{$prefix}gutter-y);
+	margin-right: calc(-0.5 * var(--#{$prefix}gutter-x));
+	margin-left: calc(-0.5 * var(--#{$prefix}gutter-x));
+}
+
+@mixin make-col-ready() {
+	box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
+	flex-shrink: 0;
+	width: 100%;
+	max-width: 100%;
+	padding-right: calc(var(--#{$prefix}gutter-x) * 0.5);
+	padding-left: calc(var(--#{$prefix}gutter-x) * 0.5);
+}
+
+@mixin make-col($size: false, $columns: $grid-columns) {
+	@if $size {
+		flex: 0 0 auto;
+		width: percentage(divide($size, $columns));
+	} @else {
+		flex: 1 1 0;
+		max-width: 100%;
+	}
+}
+
+@mixin make-col-auto() {
+	flex: 0 0 auto;
+	width: auto;
+}
+
+@mixin make-order($i) {
+	order: $i;
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+	$num: divide($size, $columns);
+	margin-left: if($num == 0, 0, percentage($num));
+}
+
+@mixin make-grid-columns(
+	$orders: $grid-orders,
+	$columns: $grid-columns,
+	$gutter: $grid-gutter-width,
+	$breakpoints: $grid-breakpoints
+) {
+	@each $breakpoint in map-keys($breakpoints) {
+		$infix: breakpoint-infix($breakpoint, $breakpoints);
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			.#{$prefix}col#{$infix} {
+				flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+			}
+			.#{$prefix}col#{$infix}-auto {
+				@include make-col-auto();
+			}
+			@if $orders > 0 {
+				@for $i from 1 through $orders {
+					.#{$prefix}order#{$infix}-#{$i} {
+						@include make-order($i);
+					}
+				}
+			}
+			@if $columns > 0 {
+				@for $i from 1 through $columns {
+					.#{$prefix}col#{$infix}-#{$i} {
+						@include make-col($i, $columns);
+					}
+				}
+
+				// `$columns - 1` because offsetting by the width of an entire row isn't possible
+				@for $i from 0 through ($columns - 1) {
+					@if not($infix == "" and $i == 0) {
+						// Avoid emitting useless .offset-0
+						.#{$prefix}offset#{$infix}-#{$i} {
+							@include make-col-offset($i, $columns);
+						}
+					}
+				}
+			}
+			@each $key, $value in $spacers {
+				.gap#{$infix}-#{$key},
+				.gap-x#{$infix}-#{$key} {
+					--#{$prefix}gutter-x: #{$value};
+				}
+
+				.gap#{$infix}-#{$key},
+				.gap-y#{$infix}-#{$key} {
+					--#{$prefix}gutter-y: #{$value};
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+@mixin text-colors($colors: $theme-colors) {
+	@each $name, $color in $colors {
+		&-#{$name} {
+			color: $color;
+		}
+	}
+}

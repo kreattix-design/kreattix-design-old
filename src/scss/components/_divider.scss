@@ -1,0 +1,89 @@
+.#{$prefix} {
+	&divider {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		border-top: $divider-border;
+
+		&-dotted {
+			border-style: dotted;
+			border-width: $divider-border-width;
+			border-color: $divider-border-color;
+		}
+		&-dashed {
+			border-style: dashed;
+			border-width: $divider-border-width;
+			border-color: $divider-border-color;
+		}
+		&-inner-text {
+			display: inline-block;
+			padding: $divider-text-padding;
+		}
+		&-horizontal {
+			display: flex;
+			clear: both;
+			width: 100%;
+			min-width: 100%;
+			margin: $divider-horizontal-margin;
+
+			&.#{$prefix}divider {
+				&-plain {
+					&.#{$prefix}divider-with-text {
+						font-weight: $font-weight-normal;
+					}
+				}
+				&-left {
+					&.#{$prefix}divider-with-text {
+						&:before {
+							width: $spacer;
+						}
+						&:after {
+							width: 100%;
+						}
+					}
+				}
+				&-right {
+					&.#{$prefix}divider-with-text {
+						&:before {
+							width: 100%;
+						}
+						&:after {
+							width: $spacer;
+						}
+					}
+				}
+				&-with-text {
+					display: flex;
+					margin: $divider-text-margin;
+					font-weight: $divider-font-weight;
+					font-size: $divider-font-size;
+					white-space: nowrap;
+					text-align: center;
+					border-top: 0;
+					border-top-color: $divider-border-color;
+
+					&:before,
+					&:after {
+						position: relative;
+						top: 50%;
+						width: 50%;
+						border-top: $divider-border;
+						border-top-color: inherit;
+						border-bottom: 0;
+						transform: translateY(50%);
+						content: "";
+					}
+				}
+			}
+		}
+		&-vertical {
+			position: relative;
+			display: inline-block;
+			height: 2rem;
+			margin: $divider-vertical-margin;
+			vertical-align: middle;
+			border-top: 0;
+			border-left: $divider-border;
+		}
+	}
+}

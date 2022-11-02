@@ -1,0 +1,36 @@
+.#{$prefix} {
+	&box {
+		display: block;
+		&.#{$prefix}box-hug-content {
+			display: inline-block;
+			flex: 0 0 auto;
+		}
+	}
+	&box-inline {
+		display: inline-block;
+	}
+	&box-flex {
+		display: flex;
+		&.#{$prefix}box-hug-content {
+			display: inline-flex;
+			flex: 0 0 auto;
+		}
+	}
+	&box-flex-inline {
+		display: inline-flex;
+	}
+	&box-fill-container {
+		width: 100%;
+	}
+	&box-hug-content {
+		width: initial;
+	}
+	&box-cover {
+		width: 100%;
+		height: 100%;
+	}
+	&box-fullscreen {
+		width: 100%;
+		height: 100vh;
+	}
+}

@@ -1,0 +1,232 @@
+$white: #ffffff !default;
+$black: #000000 !default;
+
+$gray-100: lighten($black, 97%) !default;
+$gray-200: lighten($black, 90%) !default;
+$gray-300: lighten($black, 80%) !default;
+$gray-400: lighten($black, 70%) !default;
+$gray-500: lighten($black, 60%) !default;
+$gray-600: lighten($black, 50%) !default;
+$gray-700: lighten($black, 40%) !default;
+$gray-800: lighten($black, 30%) !default;
+$gray-900: lighten($black, 20%) !default;
+
+$red: #ef4444 !default;
+$orange: #f97316 !default;
+$amber: #f59e0b !default;
+$yellow: #ffc107 !default;
+$lime: #84cc16 !default;
+$green: #22c55e !default;
+$deepGreen: #10b981 !default;
+$teal: #14b8a6 !default;
+$cyan: #06b6d4 !default;
+$lightBlue: #0ea5e9 !default;
+$blue: #3b82f6 !default;
+$indigo: #6366f1 !default;
+$violet: #8b5cf6 !default;
+$deepPurple: #a855f7 !default;
+$purple: #d946ef !default;
+$pink: #ec4899 !default;
+$rose: #f43f5e !default;
+
+$red-100: lighten($red, 20%) !default;
+$red-200: lighten($red, 15%) !default;
+$red-300: lighten($red, 10%) !default;
+$red-400: lighten($red, 5%) !default;
+$red-500: $red !default;
+$red-600: darken($red, 5%) !default;
+$red-700: darken($red, 10%) !default;
+$red-800: darken($red, 15%) !default;
+$red-900: darken($red, 20%) !default;
+
+$orange-100: lighten($orange, 20%) !default;
+$orange-200: lighten($orange, 15%) !default;
+$orange-300: lighten($orange, 10%) !default;
+$orange-400: lighten($orange, 5%) !default;
+$orange-500: $orange !default;
+$orange-600: darken($orange, 5%) !default;
+$orange-700: darken($orange, 10%) !default;
+$orange-800: darken($orange, 15%) !default;
+$orange-900: darken($orange, 20%) !default;
+
+$amber-100: lighten($amber, 20%) !default;
+$amber-200: lighten($amber, 15%) !default;
+$amber-300: lighten($amber, 10%) !default;
+$amber-400: lighten($amber, 5%) !default;
+$amber-500: $amber !default;
+$amber-600: darken($amber, 5%) !default;
+$amber-700: darken($amber, 10%) !default;
+$amber-800: darken($amber, 15%) !default;
+$amber-900: darken($amber, 20%) !default;
+
+$yellow-100: lighten($yellow, 20%) !default;
+$yellow-200: lighten($yellow, 15%) !default;
+$yellow-300: lighten($yellow, 10%) !default;
+$yellow-400: lighten($yellow, 5%) !default;
+$yellow-500: $yellow !default;
+$yellow-600: darken($yellow, 5%) !default;
+$yellow-700: darken($yellow, 10%) !default;
+$yellow-800: darken($yellow, 15%) !default;
+$yellow-900: darken($yellow, 20%) !default;
+
+$lime-100: lighten($lime, 20%) !default;
+$lime-200: lighten($lime, 15%) !default;
+$lime-300: lighten($lime, 10%) !default;
+$lime-400: lighten($lime, 5%) !default;
+$lime-500: $lime !default;
+$lime-600: darken($lime, 5%) !default;
+$lime-700: darken($lime, 10%) !default;
+$lime-800: darken($lime, 15%) !default;
+$lime-900: darken($lime, 20%) !default;
+
+$green-100: lighten($green, 20%) !default;
+$green-200: lighten($green, 15%) !default;
+$green-300: lighten($green, 10%) !default;
+$green-400: lighten($green, 5%) !default;
+$green-500: $green !default;
+$green-600: darken($green, 5%) !default;
+$green-700: darken($green, 10%) !default;
+$green-800: darken($green, 15%) !default;
+$green-900: darken($green, 20%) !default;
+
+$deepGreen-100: lighten($deepGreen, 20%) !default;
+$deepGreen-200: lighten($deepGreen, 15%) !default;
+$deepGreen-300: lighten($deepGreen, 10%) !default;
+$deepGreen-400: lighten($deepGreen, 5%) !default;
+$deepGreen-500: $deepGreen !default;
+$deepGreen-600: darken($deepGreen, 5%) !default;
+$deepGreen-700: darken($deepGreen, 10%) !default;
+$deepGreen-800: darken($deepGreen, 15%) !default;
+$deepGreen-900: darken($deepGreen, 20%) !default;
+
+$teal-100: lighten($teal, 20%) !default;
+$teal-200: lighten($teal, 15%) !default;
+$teal-300: lighten($teal, 10%) !default;
+$teal-400: lighten($teal, 5%) !default;
+$teal-500: $teal !default;
+$teal-600: darken($teal, 5%) !default;
+$teal-700: darken($teal, 10%) !default;
+$teal-800: darken($teal, 15%) !default;
+$teal-900: darken($teal, 20%) !default;
+
+$cyan-100: lighten($cyan, 20%) !default;
+$cyan-200: lighten($cyan, 15%) !default;
+$cyan-300: lighten($cyan, 10%) !default;
+$cyan-400: lighten($cyan, 5%) !default;
+$cyan-500: $cyan !default;
+$cyan-600: darken($cyan, 5%) !default;
+$cyan-700: darken($cyan, 10%) !default;
+$cyan-800: darken($cyan, 15%) !default;
+$cyan-900: darken($cyan, 20%) !default;
+
+$lightBlue-100: lighten($lightBlue, 20%) !default;
+$lightBlue-200: lighten($lightBlue, 15%) !default;
+$lightBlue-300: lighten($lightBlue, 10%) !default;
+$lightBlue-400: lighten($lightBlue, 5%) !default;
+$lightBlue-500: $lightBlue !default;
+$lightBlue-600: darken($lightBlue, 5%) !default;
+$lightBlue-700: darken($lightBlue, 10%) !default;
+$lightBlue-800: darken($lightBlue, 15%) !default;
+$lightBlue-900: darken($lightBlue, 20%) !default;
+
+$blue-100: lighten($blue, 20%) !default;
+$blue-200: lighten($blue, 15%) !default;
+$blue-300: lighten($blue, 10%) !default;
+$blue-400: lighten($blue, 5%) !default;
+$blue-500: $blue !default;
+$blue-600: darken($blue, 5%) !default;
+$blue-700: darken($blue, 10%) !default;
+$blue-800: darken($blue, 15%) !default;
+$blue-900: darken($blue, 20%) !default;
+
+$indigo-100: lighten($indigo, 20%) !default;
+$indigo-200: lighten($indigo, 15%) !default;
+$indigo-300: lighten($indigo, 10%) !default;
+$indigo-400: lighten($indigo, 5%) !default;
+$indigo-500: $indigo !default;
+$indigo-600: darken($indigo, 5%) !default;
+$indigo-700: darken($indigo, 10%) !default;
+$indigo-800: darken($indigo, 15%) !default;
+$indigo-900: darken($indigo, 20%) !default;
+
+$violet-100: lighten($violet, 20%) !default;
+$violet-200: lighten($violet, 15%) !default;
+$violet-300: lighten($violet, 10%) !default;
+$violet-400: lighten($violet, 5%) !default;
+$violet-500: $violet !default;
+$violet-600: darken($violet, 5%) !default;
+$violet-700: darken($violet, 10%) !default;
+$violet-800: darken($violet, 15%) !default;
+$violet-900: darken($violet, 20%) !default;
+
+$deepPurple-100: lighten($deepPurple, 20%) !default;
+$deepPurple-200: lighten($deepPurple, 15%) !default;
+$deepPurple-300: lighten($deepPurple, 10%) !default;
+$deepPurple-400: lighten($deepPurple, 5%) !default;
+$deepPurple-500: $deepPurple !default;
+$deepPurple-600: darken($deepPurple, 5%) !default;
+$deepPurple-700: darken($deepPurple, 10%) !default;
+$deepPurple-800: darken($deepPurple, 15%) !default;
+$deepPurple-900: darken($deepPurple, 20%) !default;
+
+$purple-100: lighten($purple, 20%) !default;
+$purple-200: lighten($purple, 15%) !default;
+$purple-300: lighten($purple, 10%) !default;
+$purple-400: lighten($purple, 5%) !default;
+$purple-500: $purple !default;
+$purple-600: darken($purple, 5%) !default;
+$purple-700: darken($purple, 10%) !default;
+$purple-800: darken($purple, 15%) !default;
+$purple-900: darken($purple, 20%) !default;
+
+$pink-100: lighten($pink, 20%) !default;
+$pink-200: lighten($pink, 15%) !default;
+$pink-300: lighten($pink, 10%) !default;
+$pink-400: lighten($pink, 5%) !default;
+$pink-500: $pink !default;
+$pink-600: darken($pink, 5%) !default;
+$pink-700: darken($pink, 10%) !default;
+$pink-800: darken($pink, 15%) !default;
+$pink-900: darken($pink, 20%) !default;
+
+$rose-100: lighten($rose, 20%) !default;
+$rose-200: lighten($rose, 15%) !default;
+$rose-300: lighten($rose, 10%) !default;
+$rose-400: lighten($rose, 5%) !default;
+$rose-500: $rose !default;
+$rose-600: darken($rose, 5%) !default;
+$rose-700: darken($rose, 10%) !default;
+$rose-800: darken($rose, 15%) !default;
+$rose-900: darken($rose, 20%) !default;
+
+$colors: (
+  "red": $red,
+  "orange": $orange,
+  "amber": $amber,
+  "yellow": $yellow,
+  "lime": $lime,
+  "green": $green,
+  "deepGreen": $deepGreen,
+  "teal": $teal,
+  "cyan": $cyan,
+  "lightBlue": $lightBlue,
+  "blue": $blue,
+  "indigo": $indigo,
+  "violet": $violet,
+  "deepPurple": $deepPurple,
+  "purple": $purple,
+  "pink": $pink,
+  "rose": $rose,
+);
+
+$grays: (
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+) !default;

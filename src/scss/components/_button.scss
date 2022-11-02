@@ -1,0 +1,171 @@
+.#{$prefix} {
+	&btn-group {
+		.#{$prefix}btn {
+			&-text {
+				padding: $btn-padding;
+			}
+			@include border-radius-with-pill(0);
+			z-index: 1;
+
+			&:not(:first-of-type) {
+				margin-left: -1px;
+			}
+
+			&:not(:last-of-type) {
+				margin-left: -1px;
+			}
+
+			&:first-of-type {
+				@include border-radius-left-with-pill($btn-border-radius);
+			}
+
+			&:last-of-type {
+				@include border-radius-right-with-pill($btn-border-radius);
+			}
+
+			&-rounded {
+				&:first-of-type {
+					@include border-radius-left-with-pill($btn-border-radius, true);
+				}
+
+				&:last-of-type {
+					@include border-radius-right-with-pill($btn-border-radius, true);
+				}
+			}
+
+			&:hover,
+			&:focus {
+				z-index: 2;
+			}
+		}
+	}
+	&btn {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: middle;
+		border: $btn-border;
+		background-color: $btn-background-color;
+		padding: $btn-padding;
+		min-height: $btn-height;
+		font-size: $btn-font-size;
+		font-family: $btn-font-family;
+		font-weight: $btn-font-weight;
+		cursor: pointer;
+		color: color-contrast($btn-background-color);
+		@include border-radius-with-pill($btn-border-radius);
+		@include box-shadow($btn-box-shadow, $btn-box-shadow-color);
+		@include transition($btn-transition);
+
+		&:not(&-text) {
+			&:hover,
+			&:focus {
+				border-color: $primary;
+				color: $primary;
+				@include box-shadow($btn-box-shadow-hover, $btn-box-shadow-color-hover);
+			}
+
+			&:active {
+				border-color: $primary;
+				color: $primary;
+				@include box-shadow($btn-box-shadow-hover, transparent);
+			}
+		}
+		&:not(&-outline):not(&-text) {
+			@include button_variants();
+		}
+		&-outline {
+			background-color: transparent;
+			@include button_outline_variants();
+		}
+		&-text {
+			min-height: initial;
+			font-weight: $btn-text-font-weight;
+			padding: 0;
+			border-color: transparent;
+			background-color: transparent;
+
+			&:hover,
+			&:focus {
+				color: $primary-hover;
+			}
+			&:active {
+				color: $primary-active;
+			}
+			@include button_text_variants();
+		}
+
+		&-rounded {
+			@include border-radius-with-pill($btn-border-radius, true);
+		}
+
+		&-only-icon {
+			padding: $btn-icon-padding;
+			min-width: $btn-height;
+			span {
+				font-size: 90%;
+			}
+		}
+		&-with-icon {
+			span.#{$prefix}btn-icon {
+				font-size: 70%;
+			}
+
+			&.#{$prefix}btn-icon-start span.#{$prefix}btn-icon {
+				margin-right: $btn-icon-margin;
+			}
+			&.#{$prefix}btn-icon-end span.#{$prefix}btn-icon {
+				margin-left: $btn-icon-margin;
+			}
+		}
+
+		&-small {
+			font-size: $btn-font-size * 0.8;
+			padding: $btn-padding-sm;
+			min-height: $btn-height-sm;
+
+			&.#{$prefix}btn-only-icon {
+				padding: $btn-icon-padding-sm;
+				min-width: $btn-height-sm;
+			}
+			&.#{$prefix}btn-with-icon {
+				&.#{$prefix}btn-icon-start span.#{$prefix}btn-icon {
+					margin-right: $btn-icon-margin-sm;
+				}
+				&.#{$prefix}btn-icon-end span.#{$prefix}btn-icon {
+					margin-left: $btn-icon-margin-sm;
+				}
+			}
+		}
+
+		&-large {
+			font-size: $btn-font-size * 1.2;
+			padding: $btn-padding-lg;
+			min-height: $btn-height-lg;
+
+			&.#{$prefix}btn-only-icon {
+				padding: $btn-icon-padding-lg;
+				min-width: $btn-height-lg;
+			}
+			&.#{$prefix}btn-with-icon {
+				&.#{$prefix}btn-icon-start span.#{$prefix}btn-icon {
+					margin-right: $btn-icon-margin-lg;
+				}
+				&.#{$prefix}btn-icon-end span.#{$prefix}btn-icon {
+					margin-left: $btn-icon-margin-lg;
+				}
+			}
+		}
+
+		&-disabled,
+		&-disabled:hover,
+		&-disabled:active {
+			cursor: not-allowed;
+			border-color: $btn-disabled-border-color;
+			background-color: $btn-disabled-background-color;
+			color: $btn-disabled-text-color;
+			box-shadow: 0 0 0 transparent;
+		}
+	}
+}

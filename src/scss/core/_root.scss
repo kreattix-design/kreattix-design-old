@@ -1,0 +1,16 @@
+:root {
+  @each $color, $value in $colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  @each $color, $value in $theme-colors {
+    --#{$prefix}#{$color}: #{$value};
+    --#{$prefix}#{$color}-hover: #{lighten($value, 7%)};
+    --#{$prefix}#{$color}-active: #{darken($value, 7%)};
+  }
+  @each $color, $value in $grays {
+    --#{$prefix}#{$color}: #{$value};
+  }
+
+  --#{$prefix}font-sans-serif: #{$font-family-sans-serif};
+  --#{$prefix}font-monospace: #{$font-family-monospace};
+}

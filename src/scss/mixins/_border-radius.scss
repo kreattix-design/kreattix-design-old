@@ -1,0 +1,77 @@
+@mixin border-radius($amount: $border-radius) {
+  @if $enable-theme-rounded {
+    border-radius: $amount;
+  }
+}
+
+@mixin border-radius-left($amount: $border-radius) {
+  @if $enable-theme-rounded {
+    border-top-left-radius: $amount;
+    border-bottom-left-radius: $amount;
+  }
+}
+
+@mixin border-radius-right($amount: $border-radius) {
+  @if $enable-theme-rounded {
+    border-top-right-radius: $amount;
+    border-bottom-right-radius: $amount;
+  }
+}
+
+@mixin border-radius-top($amount: $border-radius) {
+  @if $enable-theme-rounded {
+    border-top-left-radius: $amount;
+    border-top-right-radius: $amount;
+  }
+}
+
+@mixin border-radius-bottom($amount: $border-radius) {
+  @if $enable-theme-rounded {
+    border-bittom-left-radius: $amount;
+    border-bottom-right-radius: $amount;
+  }
+}
+
+@mixin border-radius-with-pill($amount: $border-radius, $pilled: $enable-theme-pilled) {
+  @if $pilled {
+    border-radius: $border-radius-pill;
+  } @else {
+    @include border-radius($amount);
+  }
+}
+
+@mixin border-radius-left-with-pill($amount: $border-radius, $pilled: $enable-theme-pilled) {
+  @if $pilled {
+    border-top-left-radius: $border-radius-pill;
+    border-bottom-left-radius: $border-radius-pill;
+  } @else {
+    @include border-radius-left($amount);
+  }
+}
+
+@mixin border-radius-right-with-pill($amount: $border-radius, $pilled: $enable-theme-pilled) {
+  @if $pilled {
+    border-top-right-radius: $border-radius-pill;
+    border-bottom-right-radius: $border-radius-pill;
+  } @else {
+    @include border-radius-right($amount);
+  }
+}
+
+@mixin border-radius-top-with-pill($amount: $border-radius, $pilled: $enable-theme-pilled) {
+  @if $pilled {
+    border-top-left-radius: $border-radius-pill;
+    border-top-right-radius: $border-radius-pill;
+  } @else {
+    @include border-radius-top($amount);
+  }
+}
+
+@mixin border-radius-bottom-with-pill($amount: $border-radius, $pilled: $enable-theme-pilled) {
+  @if $pilled {
+    border-bottom-left-radius: $border-radius-pill;
+    border-bottom-right-radius: $border-radius-pill;
+  } @else {
+    @include border-radius-bottom($amount);
+  }
+}

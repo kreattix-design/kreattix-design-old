@@ -1,0 +1,67 @@
+@mixin button_variants($variant: $theme-colors) {
+	@each $color, $value in $theme-colors {
+		&.#{$prefix}btn-#{$color} {
+			border-color: $value;
+			background-color: $value;
+			color: color-contrast($value);
+
+			&:hover,
+			&:focus {
+				border-color: var(--#{$prefix}#{$color}-hover);
+				background-color: var(--#{$prefix}#{$color}-hover);
+				color: color-contrast($value);
+				@if $enable-color-shadow {
+					@include box-shadow($btn-box-shadow-hover, var(--#{$prefix}#{$color}-hover));
+				}
+			}
+
+			&:active {
+				border-color: var(--#{$prefix}#{$color}-active);
+				background-color: var(--#{$prefix}#{$color}-active);
+				color: color-contrast($value);
+				@include box-shadow($btn-box-shadow-hover, transparent);
+			}
+		}
+	}
+}
+
+@mixin button_outline_variants($variant: $theme-colors) {
+	@each $color, $value in $theme-colors {
+		&.#{$prefix}btn-#{$color} {
+			border-color: $value;
+			color: $value;
+
+			&:hover,
+			&:focus {
+				border-color: var(--#{$prefix}#{$color}-hover);
+				background-color: var(--#{$prefix}#{$color}-hover);
+				color: color-contrast($value);
+				@if $enable-color-shadow {
+					@include box-shadow($btn-box-shadow-hover, var(--#{$prefix}#{$color}-hover));
+				}
+			}
+
+			&:active {
+				border-color: var(--#{$prefix}#{$color}-active);
+				background-color: var(--#{$prefix}#{$color}-active);
+				color: color-contrast($value);
+				@include box-shadow($btn-box-shadow-hover, transparent);
+			}
+		}
+	}
+}
+
+@mixin button_text_variants($variant: $theme-colors) {
+	@each $color, $value in $theme-colors {
+		&.#{$prefix}btn-#{$color} {
+			color: $value;
+			&:hover,
+			&:focus {
+				color: var(--#{$prefix}#{$color}-hover);
+			}
+			&:active {
+				color: var(--#{$prefix}#{$color}-active);
+			}
+		}
+	}
+}

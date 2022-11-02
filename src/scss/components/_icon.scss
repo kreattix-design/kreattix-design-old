@@ -1,0 +1,14 @@
+.#{$prefix} {
+	&icon {
+		line-height: 0;
+		svg {
+			font-size: 150%;
+		}
+		&-small svg {
+			font-size: 100%;
+		}
+		&-large svg {
+			font-size: 200%;
+		}
+	}
+}

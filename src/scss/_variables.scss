@@ -1,0 +1,235 @@
+$prefix: kd- !default;
+
+$enable-grid-classes: true !default;
+$enable-theme-shadow: true !default;
+$enable-theme-rounded: true !default;
+$enable-theme-pilled: false !default;
+$enable-color-shadow: true !default;
+
+$primary-color: $blue !default;
+$secondary-color: $gray-600 !default;
+$success-color: $green !default;
+$info-color: $cyan !default;
+$warning-color: $yellow !default;
+$danger-color: $red !default;
+$light-color: $gray-100 !default;
+$dark-color: $gray-900 !default;
+
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "success": $success-color,
+  "info": $info-color,
+  "warning": $warning-color,
+  "danger": $danger-color,
+) !default;
+
+$primary: var(--#{$prefix}primary) !default;
+$primary-hover: var(--#{$prefix}primary-hover) !default;
+$primary-active: var(--#{$prefix}primary-active) !default;
+$secondary: var(--#{$prefix}secondary) !default;
+$secondary-hover: var(--#{$prefix}secondary-hover) !default;
+$secondary-active: var(--#{$prefix}secondary-active) !default;
+$success: var(--#{$prefix}success) !default;
+$success-hover: var(--#{$prefix}success-hover) !default;
+$success-active: var(--#{$prefix}success-active) !default;
+$info: var(--#{$prefix}info) !default;
+$info-hover: var(--#{$prefix}info-hover) !default;
+$info-active: var(--#{$prefix}info-active) !default;
+$warning: var(--#{$prefix}warning) !default;
+$warning-hover: var(--#{$prefix}warning-hover) !default;
+$warning-active: var(--#{$prefix}warning-active) !default;
+$danger: var(--#{$prefix}danger) !default;
+$danger-hover: var(--#{$prefix}danger-hover) !default;
+$danger-active: var(--#{$prefix}danger-active) !default;
+
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+$light-text-color: $white !default;
+$dark-text-color: $gray-900 !default;
+$text-color: $dark-text-color !default;
+$disabled-text-color: $gray-300 !default;
+
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans",
+  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-family: var(--#{$prefix}font-sans-serif) !default;
+$font-family-code: var(--#{$prefix}font-monospace) !default;
+
+$root-font-size: 16px;
+
+$font-size: 1rem !default;
+$font-size-sm: $font-size * 0.75 !default;
+$font-size-lg: $font-size * 1.5 !default;
+
+$font-weight-lighter: 100 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: 800 !default;
+
+$font-weight: $font-weight-normal !default;
+
+$line-height: 1.5 !default;
+$line-height-sm: $line-height - 0.25 !default;
+$line-height-lg: $line-height + 0.5 !default;
+
+$spacer: 1.5rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+$border-width: 1px !default;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+) !default;
+
+$border-style: solid !default;
+$border-color: $gray-300 !default;
+$border: $border-width $border-style $border-color !default;
+
+$box-shadow-color: rgba($black, 0.15) !default;
+$box-shadow: 0 0.125rem 1rem !default;
+$box-shadow-sm: 0 0 0.3rem !default;
+$box-shadow-lg: 0 0.2rem 3rem !default;
+$box-shadow-inset: inset 0 1px 2px !default;
+
+$border-radius: 0.3rem !default;
+$border-radius-sm: $border-radius - 0.2 !default;
+$border-radius-md: $border-radius !default;
+$border-radius-lg: $border-radius + 0.2 !default;
+$border-radius-xl: $border-radius-lg + 0.4 !default;
+$border-radius-xxl: $border-radius-xl + 1 !default;
+$border-radius-pill: 50rem !default;
+
+// Animation
+$ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1) !default;
+$ease-base-in: cubic-bezier(0.9, 0, 0.3, 0.7) !default;
+$ease-out: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
+$ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
+$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+$ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46) !default;
+$ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6) !default;
+$ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46) !default;
+$ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1) !default;
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34) !default;
+$ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86) !default;
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1) !default;
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06) !default;
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1) !default;
+
+$transition: all 0.3s $ease-in-out;
+
+$body-bg: $gray-100 !default;
+$body-color: $text-color !default;
+$body-text-align: null !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+$grid-columns: 24 !default;
+$grid-gutter-width: $spacer !default;
+$grid-orders: 20 !default;
+
+$mark-background-color: $yellow-200;
+$mark-padding: 0;
+
+$code-margin: 0 0.2em;
+$code-padding: 0.2em 0.4em 0.1em;
+$code-font-size: 85%;
+$code-background: $gray-100;
+$code-border: 1px solid $gray-200;
+$code-border-radius: 3px;
+
+$kbd-margin: 0 0.2em;
+$kbd-padding: 0.15em 0.4em 0.1em;
+$kbd-font-size: 90%;
+$kbd-background: $gray-100;
+$kbd-border: 1px solid $gray-200;
+$kbd-border-bottom-width: 2px;
+$kbd-border-radius: 3px;
+
+$paragraph-margin-top: 0 !default;
+$paragraph-margin-bottom: $spacer * 0.5 !default;
+
+$h1-font-size: $font-size * 3;
+$h2-font-size: $font-size * 2.71;
+$h3-font-size: $font-size * 2.14;
+$h4-font-size: $font-size * 1.71;
+$h5-font-size: $font-size * 1.42;
+$h6-font-size: $font-size * 1.14;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+) !default;
+
+$headings-margin-bottom: $spacer * 0.5 !default;
+$headings-font-family: null !default;
+$headings-font-style: null !default;
+$headings-font-weight: $font-weight-bold !default;
+$headings-line-height: $line-height !default;
+$headings-color: null !default;
+
+$divider-border-color: $border-color !default;
+$divider-border-width: $border-width !default;
+$divider-border: $border !default;
+$divider-horizontal-margin: $spacer 0 !default;
+$divider-vertical-margin: 0 $spacer * 0.5 !default;
+$divider-font-weight: $font-weight-medium !default;
+$divider-font-size: $font-size !default;
+$divider-text-margin: $spacer 0 !default;
+$divider-text-padding: 0 $spacer !default;
+
+$btn-border-width: $border-width !default;
+$btn-border-style: $border-style !default;
+$btn-border-color: $border-color !default;
+$btn-border: $btn-border-width $border-style $border-color !default;
+$btn-background-color: $white !default;
+$btn-transition: all 0.2s $ease-in-out !default;
+$btn-height: 40px;
+$btn-height-sm: 32px;
+$btn-height-lg: 48px;
+$btn-padding: $spacer * 0.3 $spacer * 0.5 !default;
+$btn-padding-sm: $spacer * 0.2 $spacer * 0.4 !default;
+$btn-padding-lg: $spacer * 0.4 $spacer * 0.6 !default;
+$btn-font-size: $font-size !default;
+$btn-font-family: $font-family !default;
+$btn-font-weight: $font-weight-medium !default;
+$btn-text-font-weight: $font-weight-semibold !default;
+$btn-box-shadow: $box-shadow-sm !default;
+$btn-box-shadow-color: transparent !default;
+$btn-box-shadow-hover: $btn-box-shadow !default;
+$btn-box-shadow-color-hover: $box-shadow-color !default;
+$btn-icon-margin: $spacer * 0.3;
+$btn-icon-margin-sm: $spacer * 0.2;
+$btn-icon-margin-lg: $spacer * 0.4;
+$btn-icon-padding: $spacer * 0.3 $spacer * 0.3 !default;
+$btn-icon-padding-sm: $spacer * 0.2 $spacer * 0.2 !default;
+$btn-icon-padding-lg: $spacer * 0.4 $spacer * 0.4 !default;
+$btn-border-radius: $border-radius !default;
+$btn-disabled-background-color: $gray-200 !default;
+$btn-disabled-border-color: $gray-500 !default;
+$btn-disabled-text-color: $gray-500 !default;

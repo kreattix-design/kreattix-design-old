@@ -1,0 +1,8 @@
+@mixin helper_colors($name, $color) {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .text-#{$name} {
+    color: $color !important;
+  }
+}
