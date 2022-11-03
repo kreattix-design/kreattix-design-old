@@ -1,5 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
+import { Icon, Colors } from 'kreattix-design'
 
 const App = () => {
   return (
@@ -17,6 +18,13 @@ const App = () => {
         >
           Learn React
         </a>
+        <Icon
+          icon='Logo'
+          shape='square'
+          type='toned'
+          size='large'
+          color={Colors.purple200}
+        />
       </header>
     </div>
   )

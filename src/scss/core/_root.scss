@@ -1,6 +1,21 @@
 :root {
+  --#{$prefix}font-sans-serif: #{$font-family-sans-serif};
+  --#{$prefix}font-monospace: #{$font-family-monospace};
+
+  --#{$prefix}white: #{$white};
+  --#{$prefix}black: #{$black};
+
   @each $color, $value in $colors {
     --#{$prefix}#{$color}: #{$value};
+    --#{$prefix}#{$color}-100: #{lighten($value, 20%)};
+    --#{$prefix}#{$color}-200: #{lighten($value, 15%)};
+    --#{$prefix}#{$color}-300: #{lighten($value, 10%)};
+    --#{$prefix}#{$color}-400: #{lighten($value, 5%)};
+    --#{$prefix}#{$color}-500: #{$value};
+    --#{$prefix}#{$color}-600: #{darken($value, 5%)};
+    --#{$prefix}#{$color}-700: #{darken($value, 10%)};
+    --#{$prefix}#{$color}-800: #{darken($value, 15%)};
+    --#{$prefix}#{$color}-900: #{darken($value, 20%)};
   }
   @each $color, $value in $theme-colors {
     --#{$prefix}#{$color}: #{$value};
@@ -10,7 +25,4 @@
   @each $color, $value in $grays {
     --#{$prefix}#{$color}: #{$value};
   }
-
-  --#{$prefix}font-sans-serif: #{$font-family-sans-serif};
-  --#{$prefix}font-monospace: #{$font-family-monospace};
 }
