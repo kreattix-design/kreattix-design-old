@@ -14,6 +14,9 @@ const App = () => {
         className='App-link'
         href='https://reactjs.org/'
         target='_blank'
+        size='large'
+        variant='primary'
+        type='solid'
       >
         Learn React
       </Button.Link>
