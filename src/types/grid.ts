@@ -1,7 +1,7 @@
 import React from 'react'
-import { AlignItems, FlexDirections, Gutters, JustifyContents } from '..'
+import { AlignItems, FlexDirections, Gutters, JustifyContents } from '.'
 
-import GridItem from '../../components/grid/GridItem'
+import GridItem from '../components/grid/GridItem'
 
 export type ResponsiveGutters = {
   sm?: Gutters
