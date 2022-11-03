@@ -1,9 +1,10 @@
-import { getPrefix } from './classes'
+import { getPrefix } from '../utils'
 
 const getColor: (color: string) => string = (color) => {
   return `var(--${getPrefix()}-${color})`
 }
-export const Colors = {
+
+const Colors = {
   black: getColor('black'),
   white: getColor('white'),
   gray: getColor('gray-600'),
@@ -205,3 +206,5 @@ export const Colors = {
   rose800: getColor('rose-800'),
   rose900: getColor('rose-900')
 }
+
+export default Colors

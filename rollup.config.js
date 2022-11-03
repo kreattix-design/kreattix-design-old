@@ -13,6 +13,9 @@ import postcss from 'postcss'
 import autoprefixer from 'autoprefixer'
 
 export default {
+  watch: {
+    include: 'src/**'
+  },
   input: pkg.source || 'src/index.tsx',
   external: [
     ...Object.keys(pkg.dependencies || {}),

@@ -30,7 +30,7 @@ const Box: React.FC<BoxProps> = ({
         [`justify-${justify}`]: justify,
         [`direction-${direction}`]: direction,
         [`wrap`]: wrap,
-        [`gap-${gutter}`]: gutter || gutter === 0
+        [`g-${gutter}`]: gutter || gutter === 0
       },
       className,
       false

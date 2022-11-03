@@ -7,7 +7,6 @@ const Text = TextComponent as TextCompoundProps
 Text.Paragraph = Paragraph
 Text.Title = Title
 
-export * from './types'
 export * from './Text'
 export * from './Paragraph'
 export * from './Title'

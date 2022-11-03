@@ -1,5 +1,5 @@
-import { Sizes } from '../../utils'
 import { IconNames } from 'kreattix-design-icons'
+import { Sizes } from '../../types'
 
 export type IconShapes = 'none' | 'circle' | 'square'
 export type IconTypes = 'outlined' | 'filled' | 'toned'

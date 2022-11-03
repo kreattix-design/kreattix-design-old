@@ -3,7 +3,7 @@ import {
   FlexDirections,
   Gutters,
   JustifyContents
-} from '../../utils'
+} from '../../types'
 
 export type BoxSizes = 'fullscreen' | 'cover' | 'fill-container' | 'hug-content'
 
