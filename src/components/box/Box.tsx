@@ -1,6 +1,6 @@
 import React from 'react'
 import { classnames } from '../../utils'
-import { BoxProps } from './types'
+import { BoxProps } from '../../types'
 
 const Box: React.FC<BoxProps> = ({
   children,

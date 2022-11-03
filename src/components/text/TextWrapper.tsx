@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextWrapperProps } from './types'
+import { TextWrapperProps } from '../../types'
 
 export const TextWrapper: React.FC<TextWrapperProps> = ({
   children,

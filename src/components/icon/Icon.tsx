@@ -1,6 +1,6 @@
 import React from 'react'
 import { classnames } from '../../utils'
-import { IconProps } from './types'
+import { IconProps } from '../../types'
 import * as IconsList from 'kreattix-design-icons'
 import { IconNameListProps } from 'kreattix-design-icons'
 

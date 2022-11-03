@@ -1,6 +1,6 @@
 import React from 'react'
 import { classnames } from '../../utils'
-import { GridItemProps, ResponsiveGutters } from './types'
+import { GridItemProps, ResponsiveGutters } from '../../types'
 
 const GridItem: React.FC<GridItemProps> = ({
   children,

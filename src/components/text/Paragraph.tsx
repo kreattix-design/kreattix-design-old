@@ -1,7 +1,7 @@
 import React from 'react'
 import { classnames } from '../../utils'
 import { TextWrapper } from './TextWrapper'
-import { ParagraphProps } from './types'
+import { ParagraphProps } from '../../types'
 
 const Paragraph: React.FC<ParagraphProps> = ({
   className,

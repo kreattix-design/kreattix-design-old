@@ -1,7 +1,7 @@
 import React from 'react'
 import { classnames } from '../../utils'
 import { TextWrapper } from './TextWrapper'
-import { TitleProps } from './types'
+import { TitleProps } from '../../types'
 
 const Title: React.FC<TitleProps> = ({
   className,

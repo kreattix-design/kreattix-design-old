@@ -1,9 +1,4 @@
-import {
-  AlignItems,
-  FlexDirections,
-  Gutters,
-  JustifyContents
-} from '../../types'
+import { AlignItems, FlexDirections, Gutters, JustifyContents } from '..'
 
 export type BoxSizes = 'fullscreen' | 'cover' | 'fill-container' | 'hug-content'
 

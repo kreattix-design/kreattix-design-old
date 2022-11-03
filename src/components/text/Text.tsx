@@ -1,7 +1,7 @@
 import React from 'react'
 import { classnames } from '../../utils'
 import { TextWrapper } from './TextWrapper'
-import { TextProps } from './types'
+import { TextProps } from '../../types'
 
 const Text: React.FC<TextProps> = ({
   className,
