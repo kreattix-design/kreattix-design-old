@@ -1,6 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
-import { Box } from 'kreattix-design'
+import { Box, Text } from 'kreattix-design'
 
 const App = () => {
   return (
@@ -14,6 +14,9 @@ const App = () => {
       <p>
         Edit <code>src/App.js</code> and save to reload.
       </p>
+      <Text.Paragraph>
+        Edit <Text code>src/App.js</Text> and save to reload.
+      </Text.Paragraph>
       <a
         className='App-link'
         href='https://reactjs.org'

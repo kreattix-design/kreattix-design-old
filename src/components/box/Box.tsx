@@ -18,10 +18,10 @@ const Box: React.FC<BoxProps> = ({
 
   const classes = classnames(
     {
-      box: true,
-      'box-flex': isFlex,
-      'box-inline': !isFlex && size === 'hug-content',
-      'box-flex-inline': isFlex && size === 'hug-content',
+      [`box`]: true,
+      [`box-flex`]: isFlex,
+      [`box-inline`]: !isFlex && size === 'hug-content',
+      [`box-flex-inline`]: isFlex && size === 'hug-content',
       [`box-${size}`]: size && size !== 'hug-content'
     },
     classnames(

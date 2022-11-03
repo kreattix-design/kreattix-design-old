@@ -1,57 +1,58 @@
 .#{$prefix} {
-	&text {
-		color: inherit;
-		overflow-wrap: break-word;
+  &text {
+    color: inherit;
+    overflow-wrap: break-word;
 
-		@include text-colors();
-		&.#{$prefix}text-disabled {
-			color: $disabled-text-color;
-		}
+    @include text-colors();
+    &.#{$prefix}text-disabled {
+      color: $disabled-text-color;
+    }
 
-		&-start {
-			text-align: left;
-		}
-		&-end {
-			text-align: right;
-		}
-		&-center {
-			text-align: center;
-		}
-		&-justify {
-			text-align: justify;
-		}
-		&-ellipsis-single-line {
-			display: block;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			white-space: nowrap;
-		}
-		&-ellipsis-single-multiple {
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
-		}
+    &-start {
+      text-align: left;
+    }
+    &-end {
+      text-align: right;
+    }
+    &-center {
+      text-align: center;
+    }
+    &-justify {
+      text-align: justify;
+    }
+    &-ellipsis-single-line {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &-ellipsis-single-multiple {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
 
-		mark {
-			padding: $mark-padding;
-			background-color: $mark-background-color;
-		}
-		code {
-			margin: $code-margin;
-			padding: $code-padding;
-			font-size: $code-font-size;
-			background: $code-background;
-			border: $code-border;
-			@include border-radius($code-border-radius);
-		}
-		kbd {
-			margin: $kbd-margin;
-			padding: $kbd-padding;
-			font-size: $kbd-font-size;
-			background: $kbd-background;
-			border: $kbd-border;
-			border-bottom-width: $kbd-border-bottom-width;
-			@include border-radius($kbd-border-radius);
-		}
-	}
+    mark {
+      padding: $mark-padding;
+      background-color: $mark-background-color;
+    }
+    code {
+      color: $dark;
+      margin: $code-margin;
+      padding: $code-padding;
+      font-size: $code-font-size;
+      background: $code-background;
+      border: $code-border;
+      @include border-radius($code-border-radius);
+    }
+    kbd {
+      margin: $kbd-margin;
+      padding: $kbd-padding;
+      font-size: $kbd-font-size;
+      background: $kbd-background;
+      border: $kbd-border;
+      border-bottom-width: $kbd-border-bottom-width;
+      @include border-radius($kbd-border-radius);
+    }
+  }
 }

@@ -1,0 +1,42 @@
+import React from 'react'
+import { TextAlignments, Variants } from '../../utils'
+import Paragraph from './Paragraph'
+import Title from './Title'
+
+export interface TextWrapperProps {
+  children?: React.ReactNode
+  mark?: boolean
+  code?: boolean
+  keyboard?: boolean
+  underline?: boolean
+  deleted?: boolean
+  strong?: boolean
+  italic?: boolean
+  [key: string | number | symbol]: unknown
+}
+
+export interface TextBaseProps extends TextWrapperProps {
+  className?: string
+  variant?: Variants
+  ellipsis?: boolean
+}
+
+export interface TextProps extends TextBaseProps {
+  disabled?: boolean
+}
+
+export interface ParagraphProps extends TextBaseProps {
+  align?: TextAlignments
+}
+
+export type TitleLevels = 1 | 2 | 3 | 4 | 5 | 6
+export interface TitleProps extends TextBaseProps {
+  level?: TitleLevels
+  align?: TextAlignments
+}
+
+export interface TextCompoundProps
+  extends React.ForwardRefExoticComponent<TextProps> {
+  Paragraph: typeof Paragraph
+  Title: typeof Title
+}
