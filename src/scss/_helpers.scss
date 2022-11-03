@@ -15,9 +15,14 @@
 @each $name, $color in $colors {
   @include helper_colors($name, $color);
 }
+@each $name, $color in $color-shades {
+  @include helper_colors($name, $color);
+}
 @each $name, $color in $theme-colors {
   @include helper_colors($name, $color);
 }
+@include helper_colors(light, $light);
+@include helper_colors(dark, $dark);
 @each $name, $color in $grays {
   @include helper_colors($name, $color);
 }
