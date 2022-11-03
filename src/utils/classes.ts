@@ -1,9 +1,9 @@
 import { config } from '../utils'
 
-export type getPrefixProps = () => string
-export type addPrefixProps = (classes: string | string[]) => string
-export type mergeClassesProps = (classes: string[]) => string
-export type classnamesProps = (
+type getPrefixProps = () => string
+type addPrefixProps = (classes: string | string[]) => string
+type mergeClassesProps = (classes: string[]) => string
+type classnamesProps = (
   themeClasses: string | { [key: string]: unknown },
   customClass?: string,
   prefix?: boolean
