@@ -12,7 +12,9 @@ const App = () => {
         <Text.Title level={3} variant='primary'>
           Edit <Text code>src/App.js</Text> and save to reload.
         </Text.Title>
-        <Icon />
+        <Icon icon='ArrowLeft' />
+        <Icon icon='ArrowRight' />
+        <Icon icon='Close' />
         <Button.Link
           className='App-link'
           href='https://reactjs.org/'
