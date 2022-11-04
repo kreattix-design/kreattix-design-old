@@ -11,9 +11,9 @@ const Button: React.FC<ButtonProps> = ({
   size,
   icon,
   iconPosition = 'start',
-  rounded,
+  rounded = false,
   disabled,
-  type,
+  type = 'solid',
   ...rest
 }) => {
   const classes = classnames(

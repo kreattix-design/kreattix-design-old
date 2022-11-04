@@ -11,7 +11,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   size,
   icon,
   iconPosition = 'start',
-  rounded,
+  rounded = false,
   type = 'text',
   ...rest
 }) => {
