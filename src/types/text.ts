@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextAlignments, Variants } from '.'
+import { TextAlignments, Variants } from '../types'
 import Paragraph from '../components/text/Paragraph'
 import Title from '../components/text/Title'
 

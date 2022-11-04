@@ -1,6 +1,6 @@
 import React from 'react'
 import { classnames } from '../../utils'
-import { BoxProps } from '../../types'
+import { BoxProps, ResponsiveGutters } from '../../types'
 
 const Box: React.FC<BoxProps> = ({
   children,
@@ -11,11 +11,18 @@ const Box: React.FC<BoxProps> = ({
   size,
   flex,
   wrap = true,
-  gutter,
+  gutter = 2,
   ...rest
 }) => {
   const isFlex = align || justify || direction || flex
 
+  const responsiveClasses: { [key: string]: boolean } = {}
+  if (gutter && typeof gutter === 'object') {
+    Object.keys(gutter).forEach((item) => {
+      const key = item as keyof ResponsiveGutters
+      responsiveClasses[`g-${key}-${gutter[key]}`] = true
+    })
+  }
   const classes = classnames(
     {
       [`box`]: true,
@@ -30,7 +37,9 @@ const Box: React.FC<BoxProps> = ({
         [`justify-${justify}`]: justify,
         [`direction-${direction}`]: direction,
         [`wrap`]: wrap,
-        [`g-${gutter}`]: gutter || gutter === 0
+        [`g-${gutter}`]:
+          (gutter || gutter === 0) && !isNaN(Number(gutter.toString())),
+        ...responsiveClasses
       },
       className,
       false

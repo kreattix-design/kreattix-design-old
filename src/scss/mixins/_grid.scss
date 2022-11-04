@@ -83,11 +83,21 @@
       @each $key, $value in $spacers {
         .g#{$infix}-#{$key},
         .g-x#{$infix}-#{$key} {
-          --#{$prefix}gutter-x: #{$value};
+          column-gap: #{$value};
         }
 
         .g#{$infix}-#{$key},
         .g-y#{$infix}-#{$key} {
+          row-gap: #{$value};
+        }
+
+        .#{$prefix}gap#{$infix}-#{$key},
+        .#{$prefix}gap-x#{$infix}-#{$key} {
+          --#{$prefix}gutter-x: #{$value};
+        }
+
+        .#{$prefix}gap#{$infix}-#{$key},
+        .#{$prefix}gap-y#{$infix}-#{$key} {
           --#{$prefix}gutter-y: #{$value};
         }
       }

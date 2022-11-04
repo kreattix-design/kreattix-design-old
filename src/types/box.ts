@@ -1,4 +1,10 @@
-import { AlignItems, FlexDirections, Gutters, JustifyContents } from '.'
+import {
+  AlignItems,
+  FlexDirections,
+  Gutters,
+  JustifyContents,
+  ResponsiveGutters
+} from '../types'
 
 export type BoxSizes = 'fullscreen' | 'cover' | 'fill-container' | 'hug-content'
 
@@ -11,5 +17,5 @@ export interface BoxProps {
   size?: BoxSizes
   flex?: boolean
   wrap?: boolean
-  gutter?: Gutters
+  gutter?: Gutters | ResponsiveGutters
 }

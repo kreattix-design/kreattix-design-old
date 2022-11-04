@@ -55,6 +55,6 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "kreattix-design-icons": "^0.1.1"
+    "kreattix-design-icons": "^0.1.3"
   }
 }

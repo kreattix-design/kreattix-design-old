@@ -21,15 +21,15 @@ const Grid: React.FC<GridProps> = ({
   const classes = classnames(
     {
       [`row`]: true,
+      [`gap-${gutter}`]:
+        (gutter || gutter === 0) && !isNaN(Number(gutter.toString())),
       ...responsiveClasses
     },
     classnames(
       {
         [`justify-${justify}`]: justify,
         [`direction-${direction}`]: direction,
-        [`align-${align}`]: align,
-        [`g-${gutter}`]:
-          (gutter || gutter === 0) && !isNaN(Number(gutter.toString()))
+        [`align-${align}`]: align
       },
       className,
       false
