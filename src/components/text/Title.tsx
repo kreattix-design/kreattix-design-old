@@ -1,6 +1,6 @@
 import React from 'react'
 import { classnames } from '../../utils'
-import { TextWrapper } from './TextWrapper'
+import { sliptWrapperProps, TextWrapper } from './TextWrapper'
 import { TitleProps } from '../../types'
 
 const Title: React.FC<TitleProps> = ({
@@ -9,7 +9,7 @@ const Title: React.FC<TitleProps> = ({
   level = 1,
   align,
   ellipsis,
-  ...rest
+  ...props
 }) => {
   const classes = classnames(
     {
@@ -22,44 +22,46 @@ const Title: React.FC<TitleProps> = ({
     className
   )
 
-  const props = { className: classes, ...rest }
+  const { wrapperProps, rest } = sliptWrapperProps(props)
+
+  const newProps = { className: classes, ...rest }
 
   switch (level) {
     case 6:
       return (
-        <h6 {...props}>
-          <TextWrapper {...rest} />
+        <h6 {...newProps}>
+          <TextWrapper {...wrapperProps} />
         </h6>
       )
     case 5:
       return (
-        <h5 {...props}>
-          <TextWrapper {...rest} />
+        <h5 {...newProps}>
+          <TextWrapper {...wrapperProps} />
         </h5>
       )
     case 4:
       return (
-        <h4 {...props}>
-          <TextWrapper {...rest} />
+        <h4 {...newProps}>
+          <TextWrapper {...wrapperProps} />
         </h4>
       )
     case 3:
       return (
-        <h3 {...props}>
-          <TextWrapper {...rest} />
+        <h3 {...newProps}>
+          <TextWrapper {...wrapperProps} />
         </h3>
       )
     case 2:
       return (
-        <h2 {...props}>
-          <TextWrapper {...rest} />
+        <h2 {...newProps}>
+          <TextWrapper {...wrapperProps} />
         </h2>
       )
     case 1:
     default:
       return (
-        <h1 {...props}>
-          <TextWrapper {...rest} />
+        <h1 {...newProps}>
+          <TextWrapper {...wrapperProps} />
         </h1>
       )
   }

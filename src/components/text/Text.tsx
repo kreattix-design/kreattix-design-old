@@ -1,6 +1,6 @@
 import React from 'react'
 import { classnames } from '../../utils'
-import { TextWrapper } from './TextWrapper'
+import { sliptWrapperProps, TextWrapper } from './TextWrapper'
 import { TextProps } from '../../types'
 
 const Text: React.FC<TextProps> = ({
@@ -8,7 +8,7 @@ const Text: React.FC<TextProps> = ({
   variant,
   disabled,
   ellipsis,
-  ...rest
+  ...props
 }) => {
   const classes = classnames(
     {
@@ -20,9 +20,11 @@ const Text: React.FC<TextProps> = ({
     className
   )
 
+  const { wrapperProps, rest } = sliptWrapperProps(props)
+
   return (
     <span className={classes} {...rest}>
-      <TextWrapper {...rest} />
+      <TextWrapper {...wrapperProps} />
     </span>
   )
 }

@@ -1,6 +1,32 @@
 import React from 'react'
 import { TextWrapperProps } from '../../types'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const sliptWrapperProps = (props: { [key: string]: any }) => {
+  const {
+    children,
+    mark,
+    code,
+    keyboard,
+    underline,
+    deleted,
+    strong,
+    italic,
+    ...rest
+  } = props
+  const wrapperProps = {
+    children,
+    mark,
+    code,
+    keyboard,
+    underline,
+    deleted,
+    strong,
+    italic
+  }
+  return { wrapperProps, rest }
+}
+
 export const TextWrapper: React.FC<TextWrapperProps> = ({
   children,
   mark,

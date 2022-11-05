@@ -1,6 +1,6 @@
 import React from 'react'
 import { classnames } from '../../utils'
-import { TextWrapper } from './TextWrapper'
+import { sliptWrapperProps, TextWrapper } from './TextWrapper'
 import { ParagraphProps } from '../../types'
 
 const Paragraph: React.FC<ParagraphProps> = ({
@@ -8,7 +8,7 @@ const Paragraph: React.FC<ParagraphProps> = ({
   variant,
   align = 'justify',
   ellipsis = false,
-  ...rest
+  ...props
 }) => {
   const classes = classnames(
     {
@@ -20,9 +20,11 @@ const Paragraph: React.FC<ParagraphProps> = ({
     className
   )
 
+  const { wrapperProps, rest } = sliptWrapperProps(props)
+
   return (
     <p className={classes} {...rest}>
-      <TextWrapper {...rest} />
+      <TextWrapper {...wrapperProps} />
     </p>
   )
 }
