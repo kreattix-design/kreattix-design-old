@@ -1,6 +1,8 @@
 $prefix: kd- !default;
 
 $enable-grid-classes: true !default;
+$enable-container-classes: true !default;
+
 $enable-theme-shadow: true !default;
 $enable-theme-rounded: true !default;
 $enable-theme-pilled: false !default;
@@ -148,6 +150,15 @@ $grid-breakpoints: (
 $grid-columns: 24 !default;
 $grid-gutter-width: $spacer !default;
 $grid-orders: 20 !default;
+
+$container-padding-x: $grid-gutter-width !default;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+) !default;
 
 $mark-background-color: $yellow-200;
 $mark-padding: 0;

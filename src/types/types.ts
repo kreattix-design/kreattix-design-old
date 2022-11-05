@@ -7,6 +7,7 @@ export type Variants =
   | 'warning'
   | 'danger'
 
+export type Screens = 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 export type Sizes = 'small' | 'medium' | 'large'
 export type TextAlignments = 'start' | 'center' | 'end' | 'justify'
 export type FlexDirections = 'horizontal' | 'vertical'

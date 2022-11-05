@@ -1,5 +1,6 @@
 import { BoxProps } from './box'
 import { ButtonGroupProps, ButtonLinkProps, ButtonProps } from './button'
+import { ContainerProps } from './container'
 import { DividerProps } from './divider'
 import { GridProps } from './grid'
 import { IconProps } from './icon'
@@ -34,4 +35,5 @@ export interface KreattixProviderProps {
   Text: Pick<TextProps, 'variant' | 'ellipsis' | 'disabled'>
   Paragraph: Pick<ParagraphProps, 'variant' | 'ellipsis' | 'align'>
   Title: Pick<TitleProps, 'variant' | 'ellipsis' | 'align' | 'level'>
+  Container: Pick<ContainerProps, 'fluid'>
 }

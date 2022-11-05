@@ -43,7 +43,8 @@ const DefaultConfig: KreattixProviderProps = {
   Title: {
     level: 1,
     ellipsis: false
-  }
+  },
+  Container: {}
 }
 
 export default DefaultConfig

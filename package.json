@@ -1,6 +1,6 @@
 {
   "name": "kreattix-design",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "UI component library for React JS",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -13,7 +13,6 @@
   "scripts": {
     "start": "rollup -c --watch",
     "build": "npm run clean && rollup -c",
-    "publish": "npm run build && npm publish",
     "clean": "rimraf lib && rimraf dist",
     "format": "prettier --write \"src/**/*.{ts,tsx,json,js,jsx}\"",
     "format:check": "prettier --list-different \"src/**/*.{ts,tsx,json,js,jsx}\""

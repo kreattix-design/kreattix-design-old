@@ -14,7 +14,7 @@ import autoprefixer from 'autoprefixer'
 
 export default {
   watch: {
-    include: 'src/**'
+    include: 'src/**/*'
   },
   input: pkg.source || 'src/index.tsx',
   external: [
