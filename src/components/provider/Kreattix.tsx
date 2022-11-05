@@ -1,12 +1,7 @@
 import React, { createContext } from 'react'
 import { KreattixProviderProps } from '../../types'
 import _ from 'lodash'
-
-const DefaultConfig: KreattixProviderProps = {
-  Icon: {
-    icon: 'Close'
-  }
-}
+import DefaultConfig from './DefaultConfig'
 
 const Kreattix = createContext<KreattixProviderProps>(DefaultConfig)
 

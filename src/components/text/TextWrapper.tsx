@@ -12,7 +12,7 @@ export const sliptWrapperProps = (props: { [key: string]: any }) => {
     deleted,
     strong,
     italic,
-    ...rest
+    ...itemProps
   } = props
   const wrapperProps = {
     children,
@@ -24,7 +24,7 @@ export const sliptWrapperProps = (props: { [key: string]: any }) => {
     strong,
     italic
   }
-  return { wrapperProps, rest }
+  return { wrapperProps, itemProps }
 }
 
 export const TextWrapper: React.FC<TextWrapperProps> = ({
