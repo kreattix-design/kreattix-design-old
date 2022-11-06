@@ -7,7 +7,4 @@ const Button = KdButton as ButtonCompoundProps
 Button.Group = ButtonGroup
 Button.Link = ButtonLink
 
-export * from './Button'
-export * from './ButtonGroup'
-export * from './ButtonLink'
 export default Button

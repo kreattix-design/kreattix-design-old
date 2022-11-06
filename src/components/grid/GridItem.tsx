@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { classnames } from '../../utils'
 import { GridItemProps, ResponsiveGutters } from '../../types'
 
-const GridItem: React.FC<GridItemProps> = (props) => {
+const GridItem: FC<GridItemProps> = (props) => {
   const { children, className, span, offset, order, ...rest } = props
   const responsiveClasses: { [key: string]: boolean } = {}
   if (span && typeof span === 'object') {

@@ -1,38 +1,35 @@
-import React from 'react'
-import { classnames } from '../../utils'
-import { sliptWrapperProps, TextWrapper } from './TextWrapper'
+import React, { FC } from 'react'
 import { ParagraphProps } from '../../types'
-import { KreattixConsumer } from '../provider'
+import { classnames } from '../../utils'
+import { useKreattixContext } from '../provider'
+import { sliptWrapperProps, TextWrapper } from './TextWrapper'
 
-const Paragraph: React.FC<ParagraphProps> = (props) => (
-  <KreattixConsumer>
-    {({ Paragraph }) => {
-      const {
-        className,
-        variant = Paragraph.variant,
-        align = Paragraph.align,
-        ellipsis = Paragraph.ellipsis,
-        ...rest
-      } = props
-      const classes = classnames(
-        {
-          [`text`]: true,
-          [`text-${variant}`]: variant,
-          [`text-${align}`]: align,
-          [`text-ellipsis-single-line`]: ellipsis
-        },
-        className
-      )
+const Paragraph: FC<ParagraphProps> = (props) => {
+  const { Paragraph } = useKreattixContext()
+  const {
+    className,
+    variant = Paragraph.variant,
+    align = Paragraph.align,
+    ellipsis = Paragraph.ellipsis,
+    ...rest
+  } = props
+  const classes = classnames(
+    {
+      [`text`]: true,
+      [`text-${variant}`]: variant,
+      [`text-${align}`]: align,
+      [`text-ellipsis-single-line`]: ellipsis
+    },
+    className
+  )
 
-      const { wrapperProps, itemProps } = sliptWrapperProps(rest)
+  const { wrapperProps, itemProps } = sliptWrapperProps(rest)
 
-      return (
-        <p className={classes} {...itemProps}>
-          <TextWrapper {...wrapperProps} />
-        </p>
-      )
-    }}
-  </KreattixConsumer>
-)
+  return (
+    <p className={classes} {...itemProps}>
+      <TextWrapper {...wrapperProps} />
+    </p>
+  )
+}
 
 export default Paragraph

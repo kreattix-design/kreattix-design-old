@@ -27,8 +27,8 @@ const App = () => {
             className='text-light m-3 bg-dark'
             align='center'
           >
-            Edit <Text class='text-lightBlue-100'>src/App.js</Text> and save to
-            reload.
+            Edit <Text className='text-lightBlue-100'>src/App.js</Text> and save
+            to reload.
           </Text.Title>
         </Container>
         <Box direction='horizontal'>
