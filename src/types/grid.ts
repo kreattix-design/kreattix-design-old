@@ -1,4 +1,4 @@
-import React from 'react'
+import { ForwardRefExoticComponent, HTMLAttributes } from 'react'
 import { AlignItems, FlexDirections, Gutters, JustifyContents } from '.'
 
 import GridItem from '../components/grid/GridItem'
@@ -10,20 +10,20 @@ export type ResponsiveGutters = {
   xxl?: Gutters
 }
 
-export interface GridProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface GridProps extends HTMLAttributes<HTMLDivElement> {
   align?: AlignItems
   justify?: JustifyContents
   direction?: FlexDirections
   gutter?: Gutters | ResponsiveGutters
 }
 
-export interface GridItemProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface GridItemProps extends HTMLAttributes<HTMLDivElement> {
   span?: number | ResponsiveGutters
   offset?: number | ResponsiveGutters
   order?: number | ResponsiveGutters
 }
 
 export interface GridCompoundProps
-  extends React.ForwardRefExoticComponent<GridProps> {
+  extends ForwardRefExoticComponent<GridProps> {
   Item: typeof GridItem
 }

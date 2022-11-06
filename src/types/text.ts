@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ForwardRefExoticComponent, ReactNode } from 'react'
 import { TextAlignments, Variants } from '../types'
 import Paragraph from '../components/text/Paragraph'
 import Title from '../components/text/Title'
@@ -36,7 +36,7 @@ export interface TitleProps extends TextBaseProps {
 }
 
 export interface TextCompoundProps
-  extends React.ForwardRefExoticComponent<TextProps> {
+  extends ForwardRefExoticComponent<TextProps> {
   Paragraph: typeof Paragraph
   Title: typeof Title
 }
