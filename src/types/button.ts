@@ -2,7 +2,7 @@ import { Sizes, Variants } from './types'
 import { IconNames } from 'kreattix-design-icons/lib/types'
 import ButtonGroup from '../components/button/ButtonGroup'
 import ButtonLink from '../components/button/ButtonLink'
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 export type IconPositions = 'start' | 'end'
 export type ButtonTypes = 'solid' | 'outline' | 'text'
@@ -29,7 +29,7 @@ export interface ButtonLinkProps
 }
 
 export interface ButtonGroupProps {
-  children?: React.ReactNode
+  children?: ReactNode
   className?: string
   type?: ButtonTypes
   variant?: Variants
