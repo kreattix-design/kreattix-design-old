@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { ButtonProps } from '../../types'
 import { classnames } from '../../utils'
 import Icon from '../icon'

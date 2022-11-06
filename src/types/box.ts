@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import * as React from 'react'
 import {
   AlignItems,
   FlexDirections,
@@ -10,7 +10,7 @@ import {
 export type BoxSizes = 'fullscreen' | 'cover' | 'fill-container' | 'hug-content'
 
 export interface BoxProps {
-  children?: ReactNode
+  children?: React.ReactNode
   className?: string
   align?: AlignItems
   justify?: JustifyContents

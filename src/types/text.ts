@@ -1,10 +1,10 @@
-import { ForwardRefExoticComponent, ReactNode } from 'react'
+import * as React from 'react'
 import { TextAlignments, Variants } from '../types'
 import Paragraph from '../components/text/Paragraph'
 import Title from '../components/text/Title'
 
 export interface TextWrapperProps {
-  children?: ReactNode
+  children?: React.ReactNode
   mark?: boolean
   code?: boolean
   keyboard?: boolean
@@ -36,7 +36,7 @@ export interface TitleProps extends TextBaseProps {
 }
 
 export interface TextCompoundProps
-  extends ForwardRefExoticComponent<TextProps> {
+  extends React.ForwardRefExoticComponent<TextProps> {
   Paragraph: typeof Paragraph
   Title: typeof Title
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { DividerProps } from '../../types/divider'
 import { classnames } from '../../utils'
 import { KreattixConsumer } from '../provider'

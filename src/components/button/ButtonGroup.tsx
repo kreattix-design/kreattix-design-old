@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { ButtonGroupProps } from '../../types'
 import { classnames } from '../../utils'
 import { KreattixConsumer } from '../provider'

@@ -1,9 +1,9 @@
-import React, { createContext, ReactNode } from 'react'
+import * as React from 'react'
 import { KreattixProviderProps } from '../../types'
 import _ from 'lodash'
 import DefaultConfig from './DefaultConfig'
 
-const Kreattix = createContext<KreattixProviderProps>(DefaultConfig)
+const Kreattix = React.createContext<KreattixProviderProps>(DefaultConfig)
 
 export const DefineKreattixConfig: (
   config: KreattixProviderProps
@@ -11,7 +11,7 @@ export const DefineKreattixConfig: (
 
 export const KreattixProvider: React.FC<{
   value: KreattixProviderProps
-  children?: ReactNode
+  children?: React.ReactNode
 }> = ({ value, children }) => {
   return (
     <Kreattix.Provider value={_.merge(DefaultConfig, value)}>

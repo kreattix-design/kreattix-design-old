@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { classnames } from '../../utils'
 import { sliptWrapperProps, TextWrapper } from './TextWrapper'
 import { ParagraphProps } from '../../types'

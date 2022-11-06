@@ -1,8 +1,8 @@
-import { ReactNode } from 'react'
+import * as React from 'react'
 import { BorderStyles, FlexDirections } from './types'
 
 export interface DividerProps {
-  children: ReactNode
+  children: React.ReactNode
   className: string
   direction?: FlexDirections
   type?: BorderStyles

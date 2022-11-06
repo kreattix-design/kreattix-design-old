@@ -1,5 +1,5 @@
 import { IconNames } from 'kreattix-design-icons/lib/types'
-import { CSSProperties } from 'react'
+import * as React from 'react'
 import { Sizes } from '.'
 
 export type IconShapes = 'none' | 'circle' | 'square'
@@ -11,6 +11,6 @@ export interface IconProps {
   type?: IconTypes
   size?: Sizes
   color?: string
-  style?: CSSProperties
+  style?: React.CSSProperties
   className?: string
 }

@@ -1,8 +1,8 @@
-import { default as KdGrid } from './Grid'
+import { default as _Grid } from './Grid'
 import GridItem from './GridItem'
 import { GridCompoundProps } from '../../types'
 
-const Grid = KdGrid as GridCompoundProps
+const Grid = _Grid as GridCompoundProps
 Grid.Item = GridItem
 
 export default Grid

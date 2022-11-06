@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { classnames } from '../../utils'
 import { BoxProps, ResponsiveGutters } from '../../types'
 import { KreattixConsumer } from '../provider'

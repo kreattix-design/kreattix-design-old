@@ -7,7 +7,8 @@ import {
   Icon,
   Text,
   KreattixProvider,
-  Container
+  Container,
+  Layout
 } from 'kreattix-design'
 import { KreattixConfig } from './KreattixConfig'
 
@@ -21,14 +22,15 @@ const App = () => {
         className='bg-dark'
       >
         <img src={logo} className='App-logo' alt='logo' />
+        <Layout></Layout>
         <Container className='bg-blue' fluid>
           <Text.Title
             level={3}
             className='text-light m-3 bg-dark'
             align='center'
           >
-            Edit <Text class='text-lightBlue-100'>src/App.js</Text> and save to
-            reload.
+            Edit <Text className='text-lightBlue-100'>src/App.js</Text> and save
+            to reload.
           </Text.Title>
         </Container>
         <Box direction='horizontal'>

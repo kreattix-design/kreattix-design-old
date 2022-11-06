@@ -1,9 +1,9 @@
-import { default as KdText } from './Text'
+import { default as _Text } from './Text'
 import Paragraph from './Paragraph'
 import Title from './Title'
 import { TextCompoundProps } from '../../types'
 
-const Text = KdText as TextCompoundProps
+const Text = _Text as TextCompoundProps
 Text.Paragraph = Paragraph
 Text.Title = Title
 

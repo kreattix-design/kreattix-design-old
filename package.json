@@ -1,6 +1,6 @@
 {
   "name": "kreattix-design",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "UI component library for React JS",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -20,8 +20,8 @@
   "author": "Prince Patel",
   "license": "ISC",
   "peerDependencies": {
-    "react": "*",
-    "react-dom": "*"
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^23.0.2",
