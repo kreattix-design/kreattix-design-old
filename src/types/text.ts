@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { TextAlignments, Variants } from '../types'
 import Paragraph from '../components/text/Paragraph'
 import Title from '../components/text/Title'
 
 export interface TextWrapperProps {
-  children?: React.ReactNode
+  children?: ReactNode
   mark?: boolean
   code?: boolean
   keyboard?: boolean

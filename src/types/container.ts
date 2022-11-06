@@ -1,7 +1,8 @@
+import { ReactNode } from 'react'
 import { Screens } from './types'
 
 export interface ContainerProps {
-  children?: React.ReactNode
+  children?: ReactNode
   className?: string
   fluid?: boolean | Screens
 }
