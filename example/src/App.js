@@ -21,8 +21,10 @@ const App = () => {
         justify='center'
         className='bg-dark'
       >
+        <Layout>
+          <Layout.Sider></Layout.Sider>
+        </Layout>
         <img src={logo} className='App-logo' alt='logo' />
-        <Layout></Layout>
         <Container className='bg-blue' fluid>
           <Text.Title
             level={3}

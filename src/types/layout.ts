@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Layout from '../components/layout/Layout'
+import Sider from '../components/layout/Sider'
 
 export interface LayoutContextProps {
   siderHook: {
@@ -21,5 +21,5 @@ export interface SiderProps {
 
 export interface LayoutCompoundProps
   extends React.ForwardRefExoticComponent<LayoutProps> {
-  Sider: typeof Layout
+  Sider: typeof Sider
 }

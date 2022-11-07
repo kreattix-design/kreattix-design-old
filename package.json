@@ -1,6 +1,6 @@
 {
   "name": "kreattix-design",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "UI component library for React JS",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
